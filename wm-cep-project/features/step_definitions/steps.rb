@@ -39,6 +39,6 @@ end
 Então(/^sistema irá retornar a mensagem de CEP não encontrado$/) do
   response_extract = /\{(.*?)\}/.match(@response.body).to_s
   response_extract = JSON.parse(response_extract)
-  expect(response_extract["erro"]).to eq(false)
+  expect(response_extract["erro"]).to eq(true)
 
 end
